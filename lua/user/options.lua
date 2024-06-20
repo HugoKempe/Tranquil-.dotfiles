@@ -1,6 +1,6 @@
 local opts = {
-	shiftwidth = 4,
-	tabstop = 4,
+	shiftwidth = 2,
+	tabstop = 2,
 	expandtab = true,
 	wrap = false,
 	termguicolors = true,
@@ -15,4 +15,4 @@ end
 
 -- Set other options
 local colorscheme = require("helpers.colorscheme")
-vim.cmd.colorscheme(colorscheme)
+vim.cmd.colorscheme(colorscheme.get_if_available('oxocarbon'))

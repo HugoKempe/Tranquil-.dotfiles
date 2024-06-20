@@ -1,1 +1,2 @@
-# My epic neovim config
+# Tranquil Neovim Configuration
+> ### neovim config

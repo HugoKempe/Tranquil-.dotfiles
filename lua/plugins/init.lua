@@ -1,6 +1,15 @@
 local plugins = {
   { 'nvim-tree/nvim-web-devicons', lazy = true },
 
+  { 
+      'sudormrfbin/cheatsheet.nvim',
+      dependencies = {
+          { 'nvim-telescope/telescope.nvim' },
+          { 'nvim-lua/popup.nvim' },
+          { 'nvim-lua/plenary.nvim' },
+      },
+  },
+
   --colorschemes
   { 'folke/tokyonight.nvim' },
   { 'typicode/bg.nvim' },
@@ -9,34 +18,14 @@ local plugins = {
   { 'rose-pine/nvim', name = 'rose-pine' },
   { 'sainnhe/everforest' },
   { 'savq/melange-nvim' },
-
-  --[[
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-  },
-
-
-  
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    -- or                              , branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  --]]
-
-  --[[
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
-  }
-  --]]
+  { 'Everblush/nvim', name = 'everblush' },
+  { 'dgox16/oldworld.nvim' },
+  { 'Yazeed1s/minimal.nvim' },
+  { 'Mofiqul/vscode.nvim' },
+  { 'cpea2506/one_monokai.nvim' },
+  { 'nyoom-engineering/nyoom.nvim' },
+  { 'uncleTen276/dark_flat.nvim' },
+  { 'nyoom-engineering/oxocarbon.nvim' },
 }
 
 

@@ -1,12 +1,11 @@
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
-require('user.plugins')
+require("core").setup({
+  keybinds = {
+    leader = " "
+  }
+})
 
-vim.schedule(function()
+-- General Neovim keymaps
 require('user.mappings')
-end)
 
-
-pcall(vim.cmd.colorscheme, 'tokyonight')
+-- Other options
 require('user.options')
-require('user.auto_commands')
