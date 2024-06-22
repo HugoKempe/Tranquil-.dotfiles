@@ -102,11 +102,6 @@ function plugin.config()
   map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', "Help")
   map('n', '<leader>of', '<cmd>Telescope oldfiles<cr>', "Help")
 
-  --map('n', '<leader>ff', builtin.find_files, "Files")
-  --map('n', '<leader>fg', builtin.live_grep, "Live grep")
-  --map('n', '<leader>fb', builtin.buffers, "Buffers")
-  --map('n', '<leader>fh', builtin.help_tags, "Help")
-
   map('n', '<C-p>', "<cmd>Telescope keymaps<CR>", "Search keymaps")
 
   map('n', '<leader>fu', "<cmd>Telescope undo<cr>", "Undo tree")

@@ -11,24 +11,24 @@ local function notify_error(colorscheme)
 	local msg = "Invalid colorscheme: " .. colorscheme
     vim.notify(msg, vim.log.levels.ERROR, { title = "nvim-config" })
 end
-
 -- Fetch and setup colorscheme if available, otherwise just return 'default'
 -- This should prevent Neovim from complaining about missing colorschemes on first boot
 function M.get_if_available(name, opts)
 	local lua_ok, colorscheme = pcall(require, name)
-	if lua_ok then
-		colorscheme.setup(opts)
-		notify_success(name)
+	print("requireing Theme: " .. name)
+  if lua_ok then
+		colorscheme.config(opts)
+		--notify_success(name)
 		return name
 	end
 
 	local vim_ok, _ = pcall(vim.cmd.colorscheme, name)
 	if vim_ok then
-		notify_success(name)
+		----notify_success(name)
 		return name
 	end
 
-	notify_error(name)
+	--notify_error(name)
 	return 'default'
 end
 
