@@ -20,11 +20,11 @@ vim.g.logging_level             = "info"
 -- ╭────────────────────────────────────────────────────────────────╮ --
 -- │                        builtin variables                       │ --
 -- ╰────────────────────────────────────────────────────────────────╯ --
-local globals = {
-  mapleader                   = ' ',        --- Map leader key to SPC
-  maplocalleader              = ';',        --- Map local leader key to comma
-}
 
-for k, v in pairs(globals) do
-  vim.g[k] = v
-end
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- Custom mapping <leader> (see `:h mapleader` for more info)
+vim.g.mapleader = " "
+vim.g.maplocalleader = ";"

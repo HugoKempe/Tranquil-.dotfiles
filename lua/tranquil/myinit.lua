@@ -1,0 +1,5 @@
+--require("lua.tranquil.core.Tranquil")
+--
+--require("lua.tranquil.core.globals")
+--
+--require("tranquil.config.plugin_manager")

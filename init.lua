@@ -1,4 +1,7 @@
-require("tranquil")
+require("tranquil.core.Tranquil")
+require("tranquil.core").setup()
+
+require("user")
 --require("core").setup({
 --  keybinds = {
 --    leader = " "
