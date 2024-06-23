@@ -2,14 +2,23 @@ local fn = vim.fn
 
 local M = {}
 
+M.file_exists = function(path)
+    local f = io.open(path, "r")
+    if f ~= nil then io.close(f) return true else return false end
+end
+
+M.sleep = function(ms)
+  fn.jobstart("sleep " .. ms, {detach = true})
+end
+
 function M.executable(name)
    if fn.executable(name) > 0 then
      return true
    end
- 
+
    return false
  end
- 
+
  --- check whether a feature exists in Nvim
  --- @feat: string
  ---   the feature name, like `nvim-0.7` or `unix`.

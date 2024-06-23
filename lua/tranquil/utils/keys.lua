@@ -12,10 +12,13 @@ M.dap_map = function(mode, lhs, rhs, desc)
 	M.map(mode, lhs, rhs, desc)
 end
 
-M.set_leader = function(key)
-	vim.g.mapleader = key
-	vim.g.maplocalleader = key
-	M.map({ "n", "v" }, key, "<nop>")
+M.set_leader = function(leader, loacal_leader)
+    local loacal_leader_key = loacal_leader or leader
+    vim.api.nvim_err_writeln("loacal_leader: " .. loacal_leader_key)
+
+	vim.g.mapleader = leader
+	vim.g.maplocalleader = loacal_leader_key
+	-- M.map({ "n", "v" }, key, "<nop>")
 end
 
 return M

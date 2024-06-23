@@ -1,11 +1,12 @@
-require("core").setup({
-  keybinds = {
-    leader = " "
-  }
-})
+require("tranquil")
+--require("core").setup({
+--  keybinds = {
+--    leader = " "
+--  }
+--})
 
 -- General Neovim keymaps
-require('user.mappings')
+--require('user.mappings')
 
 -- Other options
-require('user.options')
+--require('user.options')
